@@ -1,0 +1,21 @@
+@import "../../scss/variables.scss";
+
+.listItemWrapper {
+  position: relative;
+  color: $black600;
+  // box-shadow: $neumorph-button-shadow;
+  box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+  width: 100%;
+  border: none;
+  min-height: 40px;
+  border-radius: 3px;
+  padding: 6px 50px 6px 6px;
+  display: flex;
+  align-items: center;
+  margin: 4px 0;
+  &:hover {
+    box-shadow: $neumorph-buttonHovered-shadow;
+    color: $blue900;
+  }
+}

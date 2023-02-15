@@ -1,0 +1,12 @@
+@import "../../scss/variables.scss";
+
+.headerWrapper {
+  display: flex;
+  color: $purple;
+
+  &__title {
+    margin-left: 20px;
+    color: $black900;
+    @include text-regular($size: 36px);
+  }
+}

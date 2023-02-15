@@ -1,0 +1,36 @@
+@import "../../scss/variables.scss";
+
+.button {
+  box-shadow: $neumorph-button-shadow;
+  width: 40px;
+  border: none;
+  height: 40px;
+  border-radius: 3px;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & svg path {
+    stroke: $black600;
+    fill: $black600;
+  }
+  &:hover {
+    box-shadow: $neumorph-buttonHovered-shadow;
+  }
+  &:hover svg path {
+    stroke: $blue900;
+    fill: $blue900;
+  }
+}
+.radioUnchecked {
+  & svg path {
+    stroke: $green;
+    fill: $green;
+  }
+}
+.switch {
+  & svg path {
+    stroke: $red;
+    fill: $red;
+  }
+}
