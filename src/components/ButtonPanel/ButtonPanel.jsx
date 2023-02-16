@@ -6,56 +6,60 @@ import { ReactComponent as Switch } from "../../assets/icon/switch.svg";
 import ButtonWithIcon from "../ButtonWithIcon/ButtonWithIcon";
 import { v4 as uuidv4 } from "uuid";
 
-export const createSVG = (SVGComponent) => (props) =>
-  <SVGComponent {...props} />;
+function ButtonPanel({ actions, id, isDone }) {
+  const buttonConfig = [
+    {
+      id: uuidv4(),
+      style: "radioUnchecked",
+      icon: <RadioUnchecked />,
+      action: (id) => {
+        actions.onComplete(id);
+      },
+    },
+    {
+      id: uuidv4(),
+      style: "checkmark",
+      icon: <Checkmark />,
+      action: (id) => {
+        actions.onComplete(id);
+      },
+    },
+    {
+      id: uuidv4(),
+      style: "pencil",
+      icon: <Pencil />,
+      action: (id) => {
+        actions.onRename(id);
+      },
+    },
+    {
+      id: uuidv4(),
+      style: "switch",
+      icon: <Switch />,
+      action: (id) => {
+        actions.onRemove(id);
+      },
+    },
+  ];
 
-const buttonConfig = [
-  {
-    id: uuidv4(),
-    style: "radioUnchecked",
-    icon: <RadioUnchecked />,
-    action: (id) => {
-      console.log(id);
-    },
-  },
-  // {
-  //   id: uuidv4(),
-  //   icon: <Checkmark />,
-  //   action: (id) => {
-  //     console.log(id);
-  //   },
-  // },
-  {
-    id: uuidv4(),
-    style: "pencil",
-    icon: <Pencil />,
-    action: (id) => {
-      console.log(id);
-    },
-  },
-  {
-    id: uuidv4(),
-    style: "switch",
-    icon: <Switch />,
-    action: (id) => {
-      console.log(id);
-    },
-  },
-];
-
-function ButtonPanel() {
   return (
     <div className={styles.buttonPanelWrapper}>
-      {buttonConfig.map((item, idx) => {
-        return (
-          <ButtonWithIcon
-            key={`${item.id}-${idx}`}
-            icon={item.icon}
-            action={item.action}
-            id={item.id}
-            style={item.style}
-          />
-        );
+      {buttonConfig.map((item) => {
+        if (item.style === "radioUnchecked" && isDone) {
+          return false;
+        } else if (item.style === "checkmark" && !isDone) {
+          return false;
+        } else {
+          return (
+            <ButtonWithIcon
+              key={item.id}
+              icon={item.icon}
+              action={item.action}
+              id={id}
+              style={item.style}
+            />
+          );
+        }
       })}
     </div>
   );

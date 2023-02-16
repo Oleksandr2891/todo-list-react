@@ -1,0 +1,35 @@
+.modal {
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  width: 350px;
+  height: 200px;
+  &__wrapper {
+    background-color: #060606b3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  &__buttonClose {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    & svg {
+      pointer-events: none;
+    }
+  }
+}

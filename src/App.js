@@ -1,8 +1,10 @@
 import "./scss/app.scss";
-import ToDoListWrapper from "./components/ToDoListWrapper/ToDoListWrapper";
+import ToDoListWrapper, {
+  ToDo,
+} from "./components/ToDoListWrapper/ToDoListWrapper";
 
 function App() {
-  return <ToDoListWrapper />;
+  return <ToDo />;
 }
 
 export default App;
