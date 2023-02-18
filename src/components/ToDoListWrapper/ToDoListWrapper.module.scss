@@ -1,0 +1,30 @@
+@import "../../scss/variables.scss";
+
+.wrapper {
+  background-color: $blue700;
+  overflow: hidden;
+  box-shadow: $wrapper-shadow;
+  width: calc(100vw - 10px);
+  height: calc(100vh - 10px);
+  margin: 5px;
+  padding: 0 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media screen and (min-width: $medium) {
+    margin: 100px auto 0;
+    padding: 0 150px;
+    max-width: 80vw;
+    height: 80vh;
+  }
+
+  &__panel {
+    background-color: $gray200;
+    box-shadow: $neumorph-wrapper-shadow;
+    padding: 15px;
+    border-radius: 5px;
+    min-height: 400px;
+    width: 100%;
+  }
+}

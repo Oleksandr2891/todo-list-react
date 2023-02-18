@@ -1,0 +1,10 @@
+.buttonPanelWrapper {
+  position: absolute;
+  right: 0;
+  display: flex;
+  column-gap: 6px;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin-right: 10px;
+  z-index: 10;
+}

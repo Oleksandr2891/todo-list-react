@@ -1,0 +1,19 @@
+@import "../../scss/variables.scss";
+
+.headerWrapper {
+  height: 60px;
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+  border-bottom: 1px solid $gray900;
+
+  &__title {
+    margin-left: 20px;
+    color: $black900;
+    @include text-regular($size: 22px);
+    flex: 1;
+    @media screen and (min-width: $medium) {
+      @include text-regular($size: 30px);
+    }
+  }
+}

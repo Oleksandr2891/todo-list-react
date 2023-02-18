@@ -1,0 +1,72 @@
+@import "../../scss/variables.scss";
+
+.button {
+  box-shadow: $neumorph-button-shadow;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 3px;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: $btnLightTransition;
+
+  & svg path {
+    stroke: $black600;
+    fill: $black600;
+  }
+  &:hover {
+    box-shadow: $neumorph-buttonHovered-shadow;
+  }
+  &:hover svg path {
+    stroke: $blue900;
+    fill: $blue900;
+  }
+}
+.radioUnchecked {
+  & svg path {
+    stroke: $green100;
+    fill: $green100;
+  }
+}
+.switch {
+  & svg path {
+    stroke: $red;
+    fill: $red;
+  }
+}
+.pencil,
+.checkmark,
+.radioUnchecked,
+.switch {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  @media screen and (max-width: $medium) {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.add {
+  & svg path {
+    fill: $green300;
+    stroke: $green300;
+    @include keyframes(glowing) {
+      0% {
+        stroke: $green300;
+        fill: $green300;
+      }
+      50% {
+        stroke: $green100;
+        fill: $green300;
+      }
+      100% {
+        stroke: $green300;
+        fill: $green300;
+      }
+    }
+    @include animate(glowing, 1300ms, infinite, 100ms);
+  }
+}

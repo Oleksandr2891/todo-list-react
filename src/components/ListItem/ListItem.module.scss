@@ -1,0 +1,43 @@
+@import "../../scss/variables.scss";
+
+.listItemWrapper {
+  position: relative;
+  color: $black600;
+  box-shadow: $neumorph-buttonHovered-shadow;
+  width: 100%;
+  border: none;
+  min-height: 40px;
+  border-radius: 3px;
+  padding: 6px 110px 6px 6px;
+  display: flex;
+  align-items: center;
+  margin: 4px 0;
+  @media screen and (min-width: $medium) {
+    padding: 6px 144px 6px 6px;
+  }
+  &:hover {
+    color: $blue900;
+  }
+  &:hover button {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: visible;
+  }
+  &__title_done {
+    color: $gray900;
+    text-decoration-line: line-through;
+  }
+}
+.itemChecked {
+  position: absolute;
+  right: 19px;
+  z-index: 1;
+  &:hover {
+    stroke: $green100;
+    fill: $green100;
+  }
+  @media screen and (max-width: $medium) {
+    width: 16px;
+    right: 16px;
+  }
+}

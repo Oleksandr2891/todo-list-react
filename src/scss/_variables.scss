@@ -1,0 +1,52 @@
+$black900: #000000;
+
+$black600: #272b30;
+
+$gray900: #808080;
+
+$gray200: #f2f2f2;
+$gray100: #f6f6f6;
+
+$blue900: #0d60dc;
+$blue700: #4a93ff;
+
+$red: #e53935;
+
+$green300: #2ba805;
+$green100: #49e819;
+
+$white: #ffffff;
+
+$dark-blue: #06005e;
+
+$overlay: #060606b3;
+
+$wrapper-shadow: -120px 1px 110px -80px rgba(47, 71, 196, 0.75) inset,
+  119px 1px 110px -80px rgba(47, 71, 196, 0.75) inset;
+$neumorph-wrapper-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+  -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+$neumorph-button-shadow: 6px 6px 12px 0 rgba(0, 0, 0, 0.2),
+  -6px -6px 12px 0 rgba(255, 255, 255, 0.5);
+$neumorph-buttonHovered-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2),
+  inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
+
+@mixin text-regular($size: 14px, $height: 1.25, $weigth: 200) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weigth;
+}
+
+$btnLightTransition: 0.2s ease-in-out all;
+
+$small: 380px;
+$medium: 768px;
+
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin animate($animation, $duration, $method, $times) {
+  animation: $animation $duration $method $times;
+}
