@@ -1,5 +1,4 @@
-@import "../../scss/variables.scss";
-
 .listWrapper {
-  color: $purple;
+  overflow-y: auto;
+  max-height: 60vh;
 }

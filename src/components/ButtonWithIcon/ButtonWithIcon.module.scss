@@ -26,8 +26,8 @@
 }
 .radioUnchecked {
   & svg path {
-    stroke: $green;
-    fill: $green;
+    stroke: $green100;
+    fill: $green100;
   }
 }
 .switch {
@@ -43,4 +43,30 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  @media screen and (max-width: $medium) {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.add {
+  & svg path {
+    fill: $green300;
+    stroke: $green300;
+    @include keyframes(glowing) {
+      0% {
+        stroke: $green300;
+        fill: $green300;
+      }
+      50% {
+        stroke: $green100;
+        fill: $green300;
+      }
+      100% {
+        stroke: $green300;
+        fill: $green300;
+      }
+    }
+    @include animate(glowing, 1300ms, infinite, 100ms);
+  }
 }

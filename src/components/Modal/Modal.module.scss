@@ -1,12 +1,14 @@
+@import "../../scss/variables.scss";
+
 .modal {
   position: relative;
-  background-color: white;
+  background-color: $white;
   border-radius: 10px;
   padding: 15px;
   width: 350px;
   height: 200px;
   &__wrapper {
-    background-color: #060606b3;
+    background-color: $overlay;
     position: absolute;
     top: 0;
     left: 0;
@@ -30,6 +32,10 @@
     border: none;
     & svg {
       pointer-events: none;
+    }
+    &:hover svg path {
+      stroke: $red;
+      fill: $red;
     }
   }
 }
