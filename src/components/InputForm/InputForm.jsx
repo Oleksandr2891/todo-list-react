@@ -25,7 +25,7 @@ class InputForm extends React.Component {
         this.props.onCreate(this.state);
       }
     } else {
-      alert("Ви не змогли додати задачу, тому що поле залишилось пустим (");
+      alert("Ви не змогли додати задачу, тому що поле залишилось пустим !");
       return false;
     }
     event.preventDefault();
